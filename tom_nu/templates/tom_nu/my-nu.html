@@ -1,0 +1,15 @@
+<h1>NU</h1>h1>
+<form action="/nu/my-nu/" method="get" style="display: inlin;">
+	{% csrf_token %}
+
+	<fieldset>
+	{% for field in form.visible_fields %}
+		<label>
+			{{ field.label }} : {{ field }}
+		</label>
+	{% endfor %}
+	</fieldset>
+
+	<button type="submit">My NU</button>
+
+</form>
